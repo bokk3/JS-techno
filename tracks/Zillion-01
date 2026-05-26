@@ -80,6 +80,9 @@ note("c2 c2 ~ eb2")
 ,
 
 note("c3 eb3 g3 bb3 c4 bb3 g3 eb3")
+  .sometimesBy(0.5, x =>
+    note("c3 g3 bb3 eb3 c3 ~ c3 bb2")
+  )  
   .fast(1)
 
   .s("sawtooth")
