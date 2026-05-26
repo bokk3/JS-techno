@@ -1,10 +1,10 @@
 setcps(135/120)
 
-let env = slider(0.068)
+let env = slider(0.045)
 let drive = slider(1)
 let hats = slider(1)
 let blyn = slider(1)
-let rez = slider(0.591)
+let rez = slider(0.955)
 
 stack(
 
@@ -26,8 +26,8 @@ stack(
   ,
 
   // OFFBEAT HATS
-  s("~ hh ~ hh")
-    .gain(0.18)
+  s("hh*4")
+    .gain(0.8)
     .hpf(10000)
     .swingBy(0, 0.03)
 
@@ -35,7 +35,7 @@ stack(
 
   // SHUFFLE HATS
   s("hh*8")
-    .gain(hats.range(0.01,0.14))
+    .gain(hats.range(0.01,0.5))
     .hpf(12500)
     .sometimesBy(0.2, fast(2))
     .sometimesBy(0.12, rev)
