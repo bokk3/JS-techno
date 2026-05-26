@@ -25,15 +25,102 @@ The set evolves like walking through a fading club at different hours of the nig
 
 ---
 
-## 🔴 Tracklist (Work in Progress)
+## 🕯️ Tracklist — Club Memory Arc
 
-1. BOKK3 – Zillion 01 *(peak-time neon excess / main room energy)*
-2. BOKK3 – Cherry Moon 01 *(hypnotic deep groove / emotional repetition)*
-3. BOKK3 – Extreme (Bonsai 01) *(industrial pressure / distorted intensity)*
-4. TBD *(transition state / after-hours memory drift)*
-5. TBD *(groove reconstruction / swing + rhythm focus)*
-6. TBD *(generative system / evolving algorithmic acid)*
-7. TBD *(closure / empty club / fading resonance)*
+This live set is structured as a **chronological emotional descent through Belgian nightlife culture**, reconstructed through code.
+
+Each track represents a club as a memory-state, implemented as a live Strudel performance file.
+
+All tracks made by BOKK3 / BLOKPAARD on soundcloud.
+---
+
+### 🔴 1. Zillion 01
+
+Zillion
+[Open performance → `tracks/Zillion-01`](tracks/Zillion-01)
+
+* euphoric peak-time energy
+* eurodance / trance / commercial techno excess
+* laser spectacle and hyper-stimulation
+
+> The club as a manufactured future fantasy
+
+---
+
+### 🟣 2. Cherry Moon 01
+
+Cherry Moon
+[Open performance → `tracks/Cherry-Moon-01`](tracks/Cherry-Moon-01)
+
+* deep house / trance evolution
+* hypnotic groove culture
+* emotional continuity and community energy
+
+> The club as emotional home
+
+---
+
+### ⚡ 3. Extreme 01 (Bonsai era)
+
+Extreme
+[Open performance → `tracks/Extreme-01`](tracks/Extreme-01)
+
+* hard trance / industrial techno energy
+* strobe-driven physical intensity
+* system pressure collapse
+
+> The club as overload system
+
+---
+
+### ⛪ 4. Café d’Anvers 01
+
+Café d’Anvers
+[Open performance → `tracks/Cafe-dAnvers-01`](tracks/Cafe-dAnvers-01)
+
+* deep, spacious, reverb-heavy atmosphere
+* reduced rhythm and fading structure
+* sacred architecture turned silent
+
+> The club becomes memory instead of place
+
+---
+
+### 🕳️ 5. Fuse 01
+
+Fuse
+[Open performance → `tracks/Fuse-01`](tracks/Fuse-01)
+
+* minimal techno discipline
+* groove reformation attempt
+* controlled rhythmic return
+
+> The club tries to function again
+
+---
+
+### 🏛️ 6. Boccaccio Life 01
+
+Boccaccio Life
+[Open performance → `tracks/Boccaccio-01`](tracks/Boccaccio-01)
+
+* early house / proto-rave energy
+* “Temple of House” origins
+* foundational memory layer of Belgian club culture
+
+> The club remembers its own beginning
+
+---
+
+### ⚫ 7. FINAL — The Empty Room
+
+[Open performance → `tracks/Final-01`](tracks/Final-01)
+
+* near silence / residual signal
+* fading sub pulses and noise floor
+* total disappearance of structure
+
+> The club no longer exists — only signal remains
 
 ---
 
