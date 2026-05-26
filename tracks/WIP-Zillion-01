@@ -1,0 +1,121 @@
+setcps(135/120)
+
+let env = slider(0)
+let drive = slider(1)
+let hats = slider(0.095)
+let blyn = slider(0.277)
+let rez = slider(1)
+
+stack(
+
+  // KICK
+  s("bd ~ bd ~")
+    .lpf(220)
+    .shape(0.25)
+    .gain(1.35)
+  ,
+
+  // CLAP
+  s("~ ~ cp ~")
+    .gain(0.95)
+    .room(0.18)
+    .size(0.25)
+    .hpf(1400)
+
+  ,
+
+  // OFFBEAT HATS
+  s("hh*4")
+    .gain(0.8)
+    .hpf(10000)
+    .swingBy(0, 0.03)
+
+  ,
+
+  // SHUFFLE HATS
+  s("hh*8")
+    .gain(hats.range(0.01,0.5))
+    .hpf(12500)
+    .sometimesBy(0.2, fast(2))
+    .sometimesBy(0.12, rev)
+
+  ,
+
+  // ACID BASS
+note("c2 c2 ~ eb2")
+
+  .fast(2)
+
+  .s("sawtooth")
+
+  // FILTER MOVEMENT
+  .lpf(1000)
+
+  // RESONANCE (acid core)
+  .lpq(0)
+
+  // ENVELOPE AMOUNT
+  .lpenv(2)
+
+  // DRIVE
+  .distort(drive.range(0, 2))
+
+  // ACID SHAPE
+  .attack(0.001)
+  .decay(0.11)
+  .sustain(0.08)
+  .release(0.04)
+
+  // MOVEMENT
+  .sometimesBy(0.2, rev)
+  .sometimesBy(0.15, fast(2))
+  .sometimesBy(0.1, x => x.add(12))
+
+  // CLEAN LOW END
+  .hpf(105)
+
+  .gain(blyn.range(0.6, 1.3))
+        
+,
+
+// ACID MELODY
+        
+note("c3 eb3 g3 bb3 c4 bb3 g3 eb3")
+  .sometimesBy(0.5, x =>
+    note("c3 g3 bb3 eb3 c3 ~ c3 bb2")
+  )  
+  .fast(1)
+
+  .s("sawtooth")
+
+  // ACID FILTER MOVEMENT
+  .lpf(env.range(300, 6000))
+  .lpq(rez.range(4, 22))
+  .lpenv(env.range(3, 14))
+
+  // DRIVE = aggression
+  .distort(drive.range(0.2, 2))
+
+  // NOTE MOVEMENT (arpeggio evolution)
+  .sometimesBy(0.25, rev)
+  .sometimesBy(0.2, fast(2))
+  .sometimesBy(0.15, x => x.add(12))
+  .sometimesBy(0.1, x => x.add(-12))
+
+  // ACID ENVELOPE
+  .attack(0.001)
+  .decay(0.08)
+  .sustain(0.05)
+  .release(0.06)
+
+  // SPACE
+  .room(0.12)
+  .delay(0.2)
+
+  .gain(0.55)
+
+  // VISUALS
+  ._pianoroll()
+  ._scope()
+  ._spectrum())
+
