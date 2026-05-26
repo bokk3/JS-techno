@@ -1,18 +1,20 @@
 setcps(135/120)
 
 let env = slider(0)
-let drive = slider(1)
-let hats = slider(0.095)
-let blyn = slider(0.277)
+let drive = slider(0.691)
+let hats = slider(0.527)
+let blyn = slider(1)
+let melo = slider(0.618)
 let rez = slider(1)
 
 stack(
 
   // KICK
   s("bd ~ bd ~")
+    .gain(slider(1.5))
     .lpf(220)
     .shape(0.25)
-    .gain(1.35)
+
   ,
 
   // CLAP
@@ -49,13 +51,13 @@ note("c2 c2 ~ eb2")
   .s("sawtooth")
 
   // FILTER MOVEMENT
-  .lpf(1000)
+  .lpf(env.range(400, 5000))
 
   // RESONANCE (acid core)
-  .lpq(0)
+  .lpq(2)
 
   // ENVELOPE AMOUNT
-  .lpenv(2)
+  .lpenv(env.range(2, 14))
 
   // DRIVE
   .distort(drive.range(0, 2))
@@ -75,11 +77,9 @@ note("c2 c2 ~ eb2")
   .hpf(105)
 
   .gain(blyn.range(0.6, 1.3))
-        
+
 ,
 
-// ACID MELODY
-        
 note("c3 eb3 g3 bb3 c4 bb3 g3 eb3")
   .sometimesBy(0.5, x =>
     note("c3 g3 bb3 eb3 c3 ~ c3 bb2")
@@ -112,10 +112,11 @@ note("c3 eb3 g3 bb3 c4 bb3 g3 eb3")
   .room(0.12)
   .delay(0.2)
 
-  .gain(0.55)
+  .gain(melo.range(0, 0.6))
 
   // VISUALS
   ._pianoroll()
   ._scope()
-  ._spectrum())
+  ._spectrum()
 
+  )
